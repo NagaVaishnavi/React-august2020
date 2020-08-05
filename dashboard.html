@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script type="text/javascript">
+        
+      window.onload = function() {
+      var chart1 = new CanvasJS.Chart("piechart",{
+          theme: "light1", 
+          animationEnabled: true,
+  title :{
+      text: "Sales per category"
+  },
+  data: [{
+  type: "pie",
+      dataPoints : [
+      {y: 33.45, label: "Dairy products"},
+          {y: 15.31, label: "MIlk needs"},
+          {y: 14.06, label: "Electronics"},
+          {y: 10.91, label: "Accesories"},
+          {y: 10.26, label: "Clothes"}
+  ]
+  }]
+});
+var chart2 = new CanvasJS.Chart("barchart",{
+  theme: "light1", 
+          animationEnabled: true,
+  title :{
+  text: "Sale history of electronics"
+  },
+  data: [{
+  type: "column",
+  dataPoints : [
+  { label: "powerbank",  y: 30  },
+  { label: "camera", y: 15  },
+      { label: "headset",  y: 10  },
+      
+      { label: "Laptop", y: 25  },
+      
+      { label: "Mobile",  y: 20  }
+  ]
+  }]
+});
+var chart3 = new CanvasJS.Chart("barchart2",{
+  theme: "light1", 
+          animationEnabled: true,
+  title :{
+  text: "Sale history of accesories"
+  },
+  data: [{
+  type: "column",
+  dataPoints : [
+  { label: "gloves",  y: 30  },
+  { label: "jwellery", y: 15  },
+      { label: "watches",  y: 10  },
+      
+      { label: "shoes", y: 25  },
+      
+      { label: "eyeglasses",  y: 20  }
+  ]
+  }]
+});
+var chart4 = new CanvasJS.Chart("barchart3",{
+  theme: "light1", 
+          animationEnabled: true,
+  title :{
+  text: "Sale history of Milk products"
+  },
+  data: [{
+  type: "line",
+  dataPoints : [
+  { label: "milk",  y: 30  },
+  { label: "sweets", y: 15  },
+      { label: "cheese",  y: 10  },
+      
+      { label: "butter", y: 25  },
+      
+      { label: "panner",  y: 20  }
+  ]
+  }]
+});
+var chart5 = new CanvasJS.Chart("barchart4",{
+  theme: "light1", 
+          animationEnabled: true,
+  title :{
+  text: "Sale history of clothes"
+  },
+  data: [{
+  type: "column",
+  dataPoints : [
+  { label: "Jeans",  y: 30  },
+  { label: "FestiveWear", y: 15  },
+      { label: "Jackets",  y: 10  },
+      
+      { label: "Kurtas", y: 25  },
+      
+      { label: "Tees",  y: 20  }
+  ]
+  }]
+});
+
+chart1.render();
+chart2.render();
+chart3.render();
+chart4.render();
+chart5.render();
+      }       
+    </script>
+    </head>
+    <body style="background-image: url('./images/image3.jpg'); margin-top:auto; margin-left:auto; margin-right: auto;">
+<div>
+    <ul>
+        <li><h1 class="title">$mart shop</h1></li>
+        <li><img src="./images/logo image2.jpg"></li>
+        <li><a class="home"href="#home">Home</a></li>
+        <li><a class="home"href="dashboard.html">Dashboard</a></li>
+        <li><a class="home"href="products.html">Products</a></li>
+        <li style="float:right"><a class="active" href="login.html">Signout</a></li>
+      </ul>
+</div>
+<div id="piechart" class="chart1" ></div>
+    <div id="barchart" class="chart2"></div>
+    <div id="barchart2" class="chart3" ></div>
+    <div id="barchart3" class="chart4"></div>
+    <div id="barchart4" class="chart5"></div>
